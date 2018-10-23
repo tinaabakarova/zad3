@@ -8,13 +8,14 @@ public class Collections {
     private static Map<String, Integer> map = new TreeMap<>();
 
     public static void main(String[] args) throws FileNotFoundException {
+        //Map<String, Integer> map = new TreeMap<>();
         readAndSort(map);
         showResult(map);
         findMaximum(map);
     }
 
     private static void readAndSort(Map<String, Integer> map) throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("C:\\11\\1.txt"));
+        Scanner scanner = new Scanner(new File("file.txt"));
         while (scanner.hasNext()) {
             String word = scanner.useDelimiter("\\s+").next();
             Integer value = map.get(word);
